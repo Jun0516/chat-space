@@ -31,7 +31,6 @@
 - has_many : users
 - has_many :groups_users
 
-
 ## groups_usersテーブル
 |Column|Type|Options|
 |------|----|-------|

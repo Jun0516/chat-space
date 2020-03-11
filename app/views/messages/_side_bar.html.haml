@@ -1,0 +1,21 @@
+.chat-side
+  .side-header
+    .side-header__box
+      %p.side-header__box__user-name
+        masa
+      %ul.side-header__box__menu
+        
+        %li.side-header__box__menu__new-group
+          = link_to "#", class: "contents__btn" do
+            = icon('far', 'edit')
+
+        %li.side-header__box__menu__edit-user
+          = link_to "#", class: "contents__btn" do
+            = icon('far', 'edit')
+
+  .groups
+    .group
+      %p.group__group--name
+        テックエキスパート
+      %P.group__group--message
+        テックエキスパート

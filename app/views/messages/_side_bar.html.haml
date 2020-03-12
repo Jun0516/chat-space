@@ -6,16 +6,24 @@
       %ul.side-header__box__menu
         
         %li.side-header__box__menu__new-group
-          = link_to "#", class: "contents__btn" do
+          = link_to new_group_path(current_user) do
             = icon('far', 'edit')
 
         %li.side-header__box__menu__edit-user
           = link_to edit_user_path(current_user) do
             = icon('fas', 'cog', class: 'icon')
-
+  
+  
   .groups
-    .group
-      %p.group__group--name
-        テックエキスパート
-      %P.group__group--message
-        テックエキスパート
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません。
+    -# .group
+    -#   .group__group--name
+    -#     テックエキスパート
+    -#   .group__group--message
+    -#     テックエキスパート

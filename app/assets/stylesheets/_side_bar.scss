@@ -32,11 +32,13 @@
     overflow: scroll;
     .group{
       margin-bottom: 40px;
-      &__group--name{
+      &__name{
+        color: white;
         font-size: 16px;
         margin-bottom: 5px;
       }
-      &__group--message{
+      &__message{
+        color: white;
         font-size: 11px;
       }
     }

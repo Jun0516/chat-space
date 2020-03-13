@@ -1,7 +1,8 @@
 # README
 
 ## messagesテーブル
-|Column|Type|Options|
+|Column|Type|Options|z  
+
 |------|----|-------|
 |body|text||
 |image|string||

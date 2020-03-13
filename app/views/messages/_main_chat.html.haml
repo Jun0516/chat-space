@@ -2,53 +2,32 @@
   .main-header
     .main-header__left-box
       %h2.main-header__left-box__current-group
-        タイトル
+        = @group.name
       %ul.main-header__left-box__member-list
-        メンバー:
+        menber : 
         %li.main-header__left-box__member-list
-          jun
+          %ul.main-header__left-box__member-list
+            - @group.users.each do |user|
+              %li= user.name
+    
+    
     .main-header__edit-btn
-      = link_to "#" do
-        edit
+      = link_to "edit", edit_group_path(@group) 
+            
   
   .messages
-    .message
-      .message__upper-info
-        %p.message__upper-info__talker
-          jun
-        %p.message__upper-info__date
-          2020/03/10(thu) 20:15:11
-        %p.message__text
-          hello wolld!!hello wolld!!hello wolld!!hello wolld!!hello wolld!!hello wolld!!
-    .message
-      .message__upper-info
-        %p.message__upper-info__talker
-          jun
-        %p.message__upper-info__date
-          2020/03/10(thu) 20:15:11
-        %p.message__text
-          hello wolld!!hello wolld!!hello wolld!!hello wolld!!hello wolld!!hello wolld!!
-    .message
-      .message__upper-info
-        %p.message__upper-info__talker
-          jun
-        %p.message__upper-info__date
-          2020/03/10(thu) 20:15:11
-        %p.message__text
-          hello wolld!!hello wolld!!hello wolld!!hello wolld!!hello wolld!!hello wolld!!
-    .message
-      .message__upper-info
-        %p.message__upper-info__talker
-          jun
-        %p.message__upper-info__date
-          2020/03/10(thu) 20:15:11
-        %p.message__text
-          hello wolld!!hello wolld!!hello wolld!!hello wolld!!hello wolld!!hello wolld!!
+    = render @messages
+    
+
+
+
+
+
   .form
-    %form.new_message
+    = form_for [@group, @message] do |f|
       .input-box
-        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
-        %label{class: "input-box__image"}
-          = icon('fas', 'image')
-          %input{type: "file", class: "input-box__image__file"}
-      %input{type: "submit", class: "submit-btn"}
+        = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+        = f.label :image, class: 'input-box__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'input-box__image__file'
+      = f.submit 'Send', class: 'submit-btn'

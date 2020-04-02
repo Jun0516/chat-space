@@ -1,78 +1,64 @@
 -# .wrapper
 -#   = render "side_bar"
 -#   = render "main_chat"
-
-.header
-  .main-header
-    .main-header__top
-      %h1.main-header__top__icon
-        = link_to "#" do
-          = image_tag "/logo.png",size: '134x36',alt:"FURIMA"
-      .main-header__top__searchbox
-        .main-header__top__searchbox__input-box
-          %input{type: "text", class: "main-header__top__searchbox__input-box__text", placeholder: "キーワードから探す"}
-          %button{title: "検索", type: "submit", class: "main-header__top__searchbox__input-box__submit-btn"}
-            = image_tag "/icon-search 1.png",size: '19x19',alt:"FURIMA"
-    .main-header__nav
-      %ul.main-header__nav__left
-        %li.main-header__nav__left__category
-          = link_to "#" do
-            %span カテゴリ
-        %li.main-header__nav__left__brand
-          = link_to "#" do
-            %span ブランド
-      %ul.main-header__nav__right
-        %li.main-header__nav__right
-          = link_to "#" do
-            %span ログイン
-        %li.main-header__nav__right
-          = link_to "#" do
-            %span 新規会員登録
-
-.footer
-  %ul.contents
-    %li.content
-      %h2.content__title
-        FURIMAについて
+.item-details
+  .item-detail
+    .item-detail__bread-crumbs
       %ul
         %li
           = link_to "#" do
-            %span  会社概要
+            %span フリマ >
         %li
           = link_to "#" do
-            %span  プライバシーポリシー
+            %span 家電 >
         %li
           = link_to "#" do
-            %span  FURIMA利用規約
+            %span 髭剃り > 
         %li
           = link_to "#" do
-            %span  ポイントに関する特約
-    %li.content
-      %h2.content__title
-        FURIMAを見る
-      %ul
-        %li
-          = link_to "#" do
-            %span  カテゴリー一覧
-        %li
-          = link_to "#" do
-            %span  ブランド一覧
-    %li.content
-      %h2.content__title
-        ヘルプ＆ガイド
-      %ul  
-        %li
-          = link_to "#" do
-            %span  FURIMAガイド
-        %li
-          = link_to "#" do
-            %span  FURIMAロゴ利用ガイドライン
-        %li
-          = link_to "#" do
-            %span  お知らせ
-  .footer__logo
-    %span.image
-      = image_tag "/logo-white.png", size:'134x36'
-      %p  ©︎フリマ
--# ----------------ヘッター----------------
+            %span 激安！BRAWN
+    .item-detail__content
+      .item-detail__content__name
+      .item-detail__content__img
+        
+        
+        
+      
+
+
+
+
+
+
+
+
+
+
+
+-# .top-header
+-#   .main-header
+-#     .main-header__top
+-#       %h1.main-header__top__icon
+-#         = link_to "#" do
+-#           = image_tag "logo.png",size: '134x36',alt:"FURIMA"
+-#       .main-header__top__searchbox
+-#         .main-header__top__searchbox__input-box
+-#           %input{type: "text", class: "main-header__top__searchbox__input-box__text", placeholder: "キーワードから探す"}
+-#           %button{title: "検索", type: "submit", class: "main-header__top__searchbox__input-box__submit-btn"}
+-#             = image_tag "icon-search 1.png",size: '19x19',alt:"FURIMA"
+-#     .main-header__nav
+-#       %ul.main-header__nav__left
+-#         %li.main-header__nav__left__category
+-#           = link_to "#" do
+-#             %span カテゴリ
+-#         %li.main-header__nav__left__brand
+-#           = link_to "#" do
+-#             %span ブランド
+-#       %ul.main-header__nav__right
+-#         %li.main-header__nav__right
+-#           = link_to "#" do
+-#             %span ログイン
+-#         %li.main-header__nav__right
+-#           = link_to "#" do
+-#             %span 新規会員登録
 
